@@ -1,0 +1,21 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+header{
+  
+  background-color: grey;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+li{
+  list-style: none;
+}
