@@ -27,8 +27,17 @@ app.get('/posts', (req,res)=>{
     title: "Pagina de Posts",
     posts: [
       {
-        title: 'Novidade no mundo da tecnologia"'
-      }
+        title: 'Novidade no mundo da tecnologia',
+        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nostrum ducimus laborum impedit quaerat perspiciatis doloribus tempora veritatis rerum consequatur cumque dolorem minima aut eum, architecto voluptas ipsam libero accusamus asperiores consequuntur eveniet iure nam harum! Est quibusdam asperiores, iste placeat, vero laborum veniam Ipsam.'
+      },
+      {
+        title: 'Java Script a linguagem do moments',
+        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asp, architecto voluptas ipsam libero accusamus asperiores consequuntur eveniet iure nam harum! Est quibusdam asperiores, iste placeat, vero laborum veniam Ipsam.'
+      },
+      {
+        title: ' Scrments Mussum Ipsum',
+        text: 'Lorem ipsum dolor sit amet cipt a linguagem do moonsectetur, adipisicing elit. Aspernatur nostrum ducimus laboro accusamus asperiores consequuntur eveniet iure nam harum! Est quibusdam asperiores, iste placeat, vero laborum veniam Ipsam.'
+      },
     ]
   })
 })

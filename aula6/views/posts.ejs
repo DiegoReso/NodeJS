@@ -10,7 +10,20 @@
 
   <h1>Pagina de Posts</h1>
   <h2>Posts</h2>
+
+<div class="posts">
+  <% posts.forEach((item)=>{ %>
+    <div class="post">
+      <h3><%= item.title %></h3>
+      <p><%= item.text %></p>
+    </div>
+  <%  }) %>
+    
+</div>
+
+
 </body>
+
 
 
   <%-include ('partials/footer.ejs')  %>
