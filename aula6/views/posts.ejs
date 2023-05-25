@@ -16,6 +16,12 @@
     <div class="post">
       <h3><%= item.title %></h3>
       <p><%= item.text %></p>
+
+      <% if(item.stars){%>
+        <% for( let index = 0; index < item.stars; index++ ) { %>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Star_icon_stylized.svg" alt="star">
+        <% } %>
+      <% } %>
     </div>
   <%  }) %>
     

@@ -28,11 +28,13 @@ app.get('/posts', (req,res)=>{
     posts: [
       {
         title: 'Novidade no mundo da tecnologia',
-        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nostrum ducimus laborum impedit quaerat perspiciatis doloribus tempora veritatis rerum consequatur cumque dolorem minima aut eum, architecto voluptas ipsam libero accusamus asperiores consequuntur eveniet iure nam harum! Est quibusdam asperiores, iste placeat, vero laborum veniam Ipsam.'
+        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nostrum ducimus laborum impedit quaerat perspiciatis doloribus tempora veritatis rerum consequatur cumque dolorem minima aut eum, architecto voluptas ipsam libero accusamus asperiores consequuntur eveniet iure nam harum! Est quibusdam asperiores, iste placeat, vero laborum veniam Ipsam.',
+        stars: 3
       },
       {
         title: 'Java Script a linguagem do moments',
-        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asp, architecto voluptas ipsam libero accusamus asperiores consequuntur eveniet iure nam harum! Est quibusdam asperiores, iste placeat, vero laborum veniam Ipsam.'
+        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asp, architecto voluptas ipsam libero accusamus asperiores consequuntur eveniet iure nam harum! Est quibusdam asperiores, iste placeat, vero laborum veniam Ipsam.',
+        stars: 5
       },
       {
         title: ' Scrments Mussum Ipsum',
