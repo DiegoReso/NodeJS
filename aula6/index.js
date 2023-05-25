@@ -1,6 +1,8 @@
-const express = require('express')
-const app = express()
 const path = require('path')
+const express = require('express')
+const fs = require('fs')
+
+const app = express()
 
 app.set('view engine' ,'ejs')
 
@@ -13,6 +15,10 @@ app.set('view engine' ,'ejs')
 //definindo arquivos publicos
 app.use(express.static(path.join(__dirname, 'public')))
 
+//habilita server para receber dados via post(formulario)
+app.use(express.urlencoded({extended:true}))
+
+
 //rotas
 app.get('/', (req,res)=>{
   res.render('index', {
@@ -20,6 +26,13 @@ app.get('/', (req,res)=>{
   })
 })
 
+app.get('/registerposts', (req,res)=>{
+  const {c} = req.query
+  res.render('registerposts', {
+    title: "Cadastro de Post",
+    cadastrado: c
+  })
+})
 
 
 app.get('/posts', (req,res)=>{
@@ -44,7 +57,25 @@ app.get('/posts', (req,res)=>{
   })
 })
 
+app.post('/salvar-post',(req,res)=>{
+  
+  const {titulo,texto} = req.body
 
+  const data = fs.readFileSync('./store/posts.json')
+  const posts = JSON.parse(data)
+
+  posts.push({
+    titulo,
+    texto
+  })
+
+
+  const postsString = JSON.stringify(posts)
+
+  fs.writeFileSync('./store/posts.json', postsString)
+
+ res.redirect('/registerposts?c=1')
+})
 
 app.use((req,res)=>{ //midleware
   res.send('Pagina nao encontrada')
